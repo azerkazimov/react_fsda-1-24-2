@@ -5,9 +5,11 @@ import UserInfo from "./user-info";
 import Counter from "./counter";
 import { useEffect } from "react";
 import { useState } from "react";
+import UserPost from "./user-posts";
 
 function App() {
   const [data, setData] = useState({ name: "" });
+  const [posts, setPosts] = useState([]);
 
   useEffect(() => {
     const fetchUserData = async () => {
@@ -24,7 +26,15 @@ function App() {
 
     fetchUserData();
   }, []);
-  console.log("User Data:", data);
+
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/posts")
+      .then((res) => res.json())
+      .then((data) => setPosts(data));
+  }, []);
+
+
+  
 
   return (
     <div className="App">
@@ -48,8 +58,9 @@ function App() {
           name={data.name}
           email={data.email}
           phone={data.phone}
-          adress={data.address.city}
+          adress={data.address?.city}
         />
+        <UserPost posts={posts}/>
       </header>
     </div>
   );

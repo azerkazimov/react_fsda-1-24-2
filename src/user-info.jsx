@@ -1,5 +1,5 @@
 
-export default function UserInfo({name, email, phone, adress}) {
+export default function UserInfo({name, email, phone, adress="New York"}) {
     return (
         <div>
             <h1>User Information</h1>
