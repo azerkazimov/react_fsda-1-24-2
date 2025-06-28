@@ -1,0 +1,33 @@
+nav {
+    background-color: #343434;
+    color: #fff;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+}
+
+.logo {
+    font-size: 44px;
+    color: #fff;
+}
+
+.logo a{
+    color: #fff;
+    font-weight: 700;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 44px;
+    justify-content: center;
+
+}
+
+.nav-item a {
+    color: #fff;
+    font-size: 24px;
+}
