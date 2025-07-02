@@ -1,0 +1,205 @@
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+    color: white;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.loading,
+.error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    flex-direction: column;
+    color: white;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.users-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.user-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.user-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    height: 80px;
+    position: relative;
+}
+
+.user-avatar {
+    position: absolute;
+    bottom: -30px;
+    left: 25px;
+    width: 60px;
+    height: 60px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #667eea;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    border: 4px solid white;
+}
+
+.card-content {
+    padding: 40px 25px 25px;
+}
+
+.user-name {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #2d3748;
+    margin-bottom: 5px;
+}
+
+.user-username {
+    color: #667eea;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.contact-info {
+    margin-bottom: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    padding: 8px 0;
+}
+
+.contact-icon {
+    width: 20px;
+    margin-right: 12px;
+    color: #667eea;
+    font-size: 16px;
+}
+
+.contact-text {
+    color: #4a5568;
+    font-size: 0.9rem;
+    word-break: break-all;
+}
+
+.contact-link {
+    color: #667eea;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #764ba2;
+    text-decoration: underline;
+}
+
+.company-info {
+    background: #f7fafc;
+    border-radius: 12px;
+    padding: 15px;
+    margin-top: 15px;
+    border-left: 4px solid #667eea;
+}
+
+.company-name {
+    font-weight: bold;
+    color: #2d3748;
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+.company-catchphrase {
+    color: #667eea;
+    font-style: italic;
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+}
+
+.company-bs {
+    color: #718096;
+    font-size: 0.8rem;
+}
+
+.address-info {
+    background: #edf2f7;
+    border-radius: 8px;
+    padding: 12px;
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: #4a5568;
+    line-height: 1.4;
+}
+
+.address-street {
+    font-weight: 500;
+    margin-bottom: 3px;
+}
+
+@media (max-width: 768px) {
+    .users-list {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .user-card {
+        margin: 0 10px;
+    }
+}

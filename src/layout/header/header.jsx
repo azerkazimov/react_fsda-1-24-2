@@ -13,6 +13,7 @@ export default function Header() {
             <li className="nav-item"><a href="/about">About</a></li>
             <li className="nav-item"><a href="/contact">Contact</a></li>
             <li className="nav-item"><a href="/service">Service</a></li>
+            <li className="nav-item"><a href="/users">Users</a></li>
           </ul>
         </div>
       </div>
